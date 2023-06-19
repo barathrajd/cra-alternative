@@ -1,13 +1,12 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.css';
-
-import NxWelcome from './nx-welcome';
+import Login from 'src/view/Auth/Login';
+import { store } from './store';
+import { Provider } from 'react-redux';
 
 export function App() {
   return (
-    <div>
-      <NxWelcome title="cra-alternative" />
-    </div>
+    <Provider store={store}>
+      <Login />
+    </Provider>
   );
 }
 
